@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>City Delicatessen</title>
+    <link href="assignment2.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="assignment2.js"></script>
+</head>
+
+<body onload="mydate();return false;">
+    <header>
+        <h1 class="niceFont">City Delicatessen</h1>
+        <h4 id="mydate"> </h4>
+    </header>
+    <form id="register" onsubmit="register();return false">
+        <br>
+        <p>First name: <input type="text" pattern="[A-Za-z]{1,32}" id="firstname" placeholder="Enter first name"
+                required="true"></p>
+        <p>Last name: <input type="text" pattern="[A-Za-z]{1,32}" id="lastname" placeholder="Enter last name"
+                required="true"></p>
+        <p>Address: <input type="text" id="address" placeholder="Enter address" required="true"></p>
+        <p>Phone number: <input type="tel" id="phone" placeholder="Enter Phone Number" required="true"></p>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <!--<form id="menu">-->
+    <form id = "pizzaMenu" onsubmit="newPizza(); return false;">
+        <h1 class="niceFont">Pizza Menu<img src="pizza.jpg"> </h1>
+
+        <br>
+        <label for="typePizza">Type of Pizza you would like to buy(Choose one):</label>
+        <p>Super Cheesy<img src="extraCheesy.jpg"><input type="radio" name="typePizza" id="typePizza1" value="Super Cheesy">
+            Extra Meaty<img src="exrtaMeaty.jpg"><input type="radio" name="typePizza" id="typePizza2" value="Extra Meaty">
+            Really Veggie<img src="veggiePizza.jpg"><input type="radio" name="typePizza" id="typePizza3" value="Really Veggie"></p>
+        <br>
+        <label for="sizePizza">Size of Pizza you would like to buy:</label>
+        <p>Small: $8.50<input type="radio" name="sizePizza" id="sizePizza1" value="8.50">
+            Medium: $11.50<input type="radio" name="sizePizza" id="sizePizza2" value="11.50">
+            Large: $14.00<input type="radio" name="sizePizza" id="sizePizza3" value="14.00">
+            Extra-Large: $16.50<input type="radio" name="sizePizza" id="sizePizza4" value="16.50"></p>
+        <br>
+        <label>Enter the how many boxes you would like to buy:</label>
+        <p>Quantity: <input type="number" id="quantityPizza1" placeholder="0" min="0"></p>
+        <br>
+        <label for="pizzaTopping">You may choose any of these toppings:</label>
+        <p>Extra Cheese: <input type="checkbox" id="pizzaTopping1" value="Extra Cheese">
+            Mushrooms: <input type="checkbox" id="pizzaTopping2" value="Mushrooms">
+            Olives: <input type="checkbox" id="pizzaTopping3" value="Olives"></p>
+        <br>
+
+        <input type="submit" value = "New Pizza Order">
+    </form>
+    <form>
+        <h1 class="niceFont">Sandwich Menu<img src="sandwich.jpg"></h1>
+        <br>
+        <label for="typeSandwich">Choose one order from the Sandwich Menu:</label>
+        <p>All Garden Vagetarian $7.50<img src="veggiSandwich.jpg"> <input type="radio" name="typeSandwich" id="typeSandwich1" value="7.50">
+            Big Beef on a Bun $8.50<img src="beefSandwich.jpg"><input type="radio" name="typeSandwich"  id="typeSandwich2" value="8.50">
+            Mixed Grill $9.50<img src="mixedGrillSandwich.jpg"><input type="radio" name="typeSandwich"  id="typeSandwich3" value="9.50">
+        </p>
+        <br>
+        <label for="quantitySandwich">Enter how many sandwiches you would like to buy:</label>
+        <br>
+        <p>Quantity: <input type="number" id="quantitySandwich" placeholder="0" min="0"></p>
+        <br>
+        <input type="submit" value="New Sandwich Order" onclick="newSandwich();return false;">
+    </form>
+    <form id="drinkMenu">
+        <h1 class="niceFont">Drink Menu<img src="drink.jpeg"></h1>
+        <label for="typeDrink">Choose one order from the drink menu:</label>
+        <p>Cola<img src="cola.jpeg"><input type="radio" name="typeDrink" id="typeDrink1" value="Cola">
+            Sprite<img src="sprite.jpeg"><input type="radio" name="typeDrink" id="typeDrink2" value="Sprite">
+            Root Beer<img src="rootBeer.jpeg"><input type="radio" name="typeDrink" id="typeDrink3" value="RootBeer"></p>
+        <br>
+        <label for="sizeDrink">Size of Drink you would like to buy:</label>
+        <p>Small $1.25<input type="radio" name="sizeDrink" id="sizeDrink1" value="1.25">
+            Medium $1.75<input type="radio" name="sizeDrink" id="sizeDrink2" value="1.75">
+            Large $2.00<input type="radio" name="sizeDrink" id="sizeDrink3" value="2.00"></p>
+        <label for="quantityDrinks">Enter how many drinks you would like to buy:</label>
+        <br>
+        <p>Quantity: <input type="number" id="quantityDrinks" placeholder="0" min="0"></p>
+        <br>    
+        <input type="submit" value="New Drink Order" onclick="newDrink();return false;">
+    </form>
+    <br><br><br>
+    <form>
+    <h1 class="niceFont">Customer Orders</h1>
+        <button id="finalOrder" onclick="getFinalOrder();return false;">Final Order</button>
+        <h3><span id = "orders"></span></h3>
+    </form>
+</body>
+
+</html>

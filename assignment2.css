@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Mrs+Sheppards');
+h1{
+    text-align: center;
+}
+body{
+    padding: 30px;
+    background-image: url("maxresdefault.jpg")
+}
+form{
+    text-align: center;
+    border-color: solid black;
+    border-style: dotted;
+    background-color: bisque;
+}
+img{
+    height: 30px;
+    width: 30px;
+}
+img:hover
+{
+    height: 125px;
+    width: 125px;
+}
+#id{
+    text-align: right;
+}
+#finalOrder{
+    padding: 20px;
+    border-color: 3px solid black;
+    font-weight: 400px;
+}
+#finalOrder:hover{
+    color: red;
+}
+.niceFont{
+    font-family: 'Mrs Sheppards', cursive;
+}
